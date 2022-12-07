@@ -57,9 +57,7 @@ function handleSubmit(e) {
   } else if (numberInp.value.length < 16) {
     numberInp.classList.add("error1");
     numberInp.parentElement.classList.add("error1_message");
-  } else if (numberInp.value.length > 16) {
-    numberInp.classList.add("error1");
-    numberInp.parentElement.classList.add("error1_message");
+  
   } else {
     numberInp.classList.remove("error");
     numberInp.parentElement.classList.remove("error_message");
@@ -110,7 +108,7 @@ function handleSubmit(e) {
   if (
     nameInp.value &&
     numberInp.value &&
-    monthInp.value.length==2 && monthInp.value<12 &&
+    monthInp.value.length==2 && monthInp.value<=12 &&
     yearInp.value.length==2 &&
     cvcInp.value.length==3 &&
     numberInp.value.length == 16
