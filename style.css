@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500&display=swap");
+
+@media screen and (max-width: 1023px) {
+  .front_card,
+  .front_card img,
+  .back_card,
+  .back_card img {
+    width: 300px;
+  }
+  .card_container .card_logo {
+    width: 50px;
+  }
+  #number {
+    font-size: 1.1rem;
+  }
+  #cvc {
+    top: 42%;
+    right: 12%;
+  }
+}
+
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Red: hsl(0, 100%, 66%);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "space Grotesk ", sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+.hidden {
+  display: none !important;
+}
+.error {
+  border: 2px solid var(--Red);
+}
+.error1,.error2{
+  border: 2px solid var(--Red);
+
+}
+.error_message ,.error2_message{
+  gap: 0rem;
+}
+.error1_message {
+    gap: 0rem;
+  }
+.error_message::after {
+    content: "can't be blank";
+    color: var(--Red);
+  margin-top: 0.2rem;
+}
+.error1_message::after {
+    content: "check the number again";
+    color: var(--Red);
+  margin-top: 0.2rem;
+}
+.error2_message::after {
+  content: "invalid format";
+  color: var(--Red);
+margin-top: 0.2rem;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.left_section {
+  min-height: 100vh;
+  width: 40%;
+  background-image: url("./images/bg-main-desktop.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.cards {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 100%;
+  gap: 2rem;
+  transform: translate(-50%, -50%);
+}
+.front_card {
+  position: relative;
+  transform: translateX(-100px);
+}
+.card_logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+#number {
+  position: absolute;
+  color: var(--White);
+  bottom: 5rem;
+  left: 1rem;
+  letter-spacing: 2px;
+}
+.card_info {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  right: 3rem;
+  display: flex;
+  color: var(--White);
+  justify-content: space-between;
+}
+.back_card {
+  position: relative;
+}
+#cvc {
+  position: absolute;
+  right: 3.5rem;
+  top: 7rem;
+  color: var(--Light-grayish-violet);
+}
+.right_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.right_section form {
+  display: grid;
+  gap: 1rem;
+  width: 350px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+label {
+  color: var(--Very-dark-violet);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+input {
+  padding: 0.5rem;
+  font-size: 18px;
+  border: 2px solid var(--Dark-grayish-violet);
+  border-radius: 6px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder {
+  font-family: inherit;
+  color: var(--Dark-grayish-violet);
+}
+input-focus {
+  outline-color: hsl(249, 99%, 64%);
+}
+.grid1 {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 span;
+}
+.grid2 {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 span;
+}
+.grid3 {
+  display: flex;
+  flex-direction: column;
+}
+.grid4 {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 span;
+}
+.card_information {
+  display: flex;
+  grid-column: 1 span;
+  gap: 1 rem;
+}
+#card_date {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 span;
+}
+#card_date .two_inp {
+  display: flex;
+}
+.two_inp div {
+  flex-direction: column;
+}
+#card_date div input {
+  width: 70px;
+  margin-inline: 0.5rem;
+  margin-left: 0;
+}
+#card_cvc {
+  width: 100%;
+}
+form button {
+  grid-column: 2 span;
+  font-size: 18px;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+}
+.thank {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.thank h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.thank p {
+  font-size: 18px;
+
+  color: var(--Dark-grayish-violet);
+}
+.thank button {
+  padding: 1rem;
+  width: 100%;
+  font-size: 18px;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+}
+@media screen and (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+    .front_card,
+    .front_card img,
+    .back_card,
+    .back_card img {
+      width: 270px;
+    }
+    .left_section {
+      width: 100%;
+      max-height: 30vh;
+      background-image: url('./images/bg-main-mobile.png');
+      background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+    }
+    .right_section{
+      margin :32px 32px ;
+      /* padding: 2px 2px 2px 2px; */
+    }
+    
+    .cards {
+      flex-direction: column-reverse;
+      left: 61%;
+      top: 60%;
+      gap: 0;
+    }
+    .back_card {
+      transform: translateY(70px);
+    }
+    .front_card {
+      z-index: 100;
+    }
+    .right_section {
+      margin-top: 6 rem;
+    }
+  }

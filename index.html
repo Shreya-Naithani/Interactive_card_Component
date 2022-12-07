@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+<link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="left_section">
+          <div class="cards">
+            <div class="front_card">
+              <img src="./images/bg-card-front.png" alt="front_card" />
+              <div class="card_container">
+                <img  class="card_logo"
+                src="./images/card-logo.svg" alt="card_logo" />
+                <h1 id="number">0000 0000 0000 0000</h1>
+                <div class="card_info">
+                  <span id="name">shreya naithani</span>
+                  <span id="date">
+                    <span id="month">00</span>
+                    /
+                    <span id="year" year>00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="back_card">
+              <img src="./images/bg-card-back.png" alt="back_card" />
+              <span id="cvc">000</span>
+            </div>
+          </div>
+        </div>
+        <div class="right_section">
+          <form>
+            <div class="grid1">
+              <label for="card_name">Cardholder Name</label>
+              <input
+                type="text"
+                id="card_name"
+                required
+                placeholder="e.g. Shreya Naithani"
+              />
+            </div>
+
+            <div class="grid2">
+              <label for="card_number"> Card Number</label>
+              <input
+                type="number"
+                id="card_number"
+                required
+                oninput="if(this.value.length>this.maxlength)this.value=this.value.slice(0,this.maxlength)"
+                maxlength="16"
+                minlength="16"
+                placeholder=" e.g. 1234 5678 9123 0000"
+              />
+            </div>
+
+            <div class="card_information">
+              <div id="card_date">
+              <label  for="card_date"> Exp. Date (MM/YY)</label>
+              <div class="two_inp">
+                <div>
+                  <input
+                    type="number"
+                    id="card_month"
+                    required
+                    oninput="if(this.value.length>this.maxlength)this.value=this.value.slice(0,this.maxlength)"
+                    maxlength="2"
+                    minlength="2"
+                    placeholder=" MM"
+                  />
+                </div>
+             
+              <div>
+                <input
+                  type="number"
+                  id="card_year"
+                  required
+                  oninput="if(this.value.length>this.maxlength)this.value=this.value.slice(0,this.maxlength)"
+                  maxlength="2"
+                  minlength="2"
+                  placeholder=" YY"
+                />
+              </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="grid4">
+              <label for="card_cvc"> CVC</label>
+              <input
+                type="number"
+                required
+                oninput="if(this.value.length>this.maxlength)this.value=this.value.slice(0,this.maxLength)"
+                maxlength="3"
+                minlength="3"
+                id="card_cvc"
+                placeholder="e.g. 123"
+              />
+            </div>
+            <button id="submit_btn" type="submit">Confirm</button>
+          </form>
+          <div class="thank hidden">
+            <img src="./images/icon-complete.svg"alt="completed">
+            <h1> Thank you!</h1>
+             <p>We've added your card details</p>
+             <button id="btn"> Continue</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script> 
+  </body>
+</html>
