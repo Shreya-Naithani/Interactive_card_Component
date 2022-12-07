@@ -251,6 +251,7 @@ form button {
     .left_section {
       width: 100%;
       max-height: 30vh;
+      min-height:40vh;
       background-image: url('./images/bg-main-mobile.png');
       background-position: center center;
   background-repeat: repeat;
@@ -258,7 +259,7 @@ form button {
   position: relative;
     }
     .right_section{
-      margin :32px 32px ;
+      margin :58px 58px ;
       /* padding: 2px 2px 2px 2px; */
     }
     
@@ -274,7 +275,5 @@ form button {
     .front_card {
       z-index: 100;
     }
-    .right_section {
-      margin-top: 6 rem;
-    }
+   
   }
