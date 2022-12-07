@@ -101,14 +101,11 @@ function handleSubmit(e) {
     cvcInp.classList.add("error");
     cvcInp.parentElement.classList.add("error_message");
   } 
-  else if(cvcInp.value.length>3||cvcInp.value.length<3){
-    cvcInp.classList.add("error1");
-    cvcInp.parentElement.classList.add("error1_message");
+  
   }else {
     cvcInp.classList.remove("error");
     cvcInp.parentElement.classList.remove("error_message");
-    cvcInp.classList.remove("error1");
-    cvcInp.parentElement.classList.remove("error1_message");
+   
   }
   if (
     nameInp.value &&
